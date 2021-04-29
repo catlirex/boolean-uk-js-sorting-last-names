@@ -15,13 +15,16 @@ lastName.sort();
 alert(`Here is the sorted Name list
 ${lastName}`)
 
-for(let i = 0; i < lastName.length; i++ ){
-    if(lastName[i] === newName){
-        i++;
-        alert(`Your name is on position ${i} of the sorted Name list`)
-        break;
-    }
-}
+// for(let i = 0; i < lastName.length; i++ ){
+//     if(lastName[i] === newName){
+//         i++;
+//         alert(`Your name is on position ${i} of the sorted Name list`)
+//         break;
+//     }
+// }
+
+const index = lastName.indexOf(newName);
+alert(`Your name is on position ${index+1} of the sorted Name list`)
 
 const upperNameList = []
 
@@ -38,8 +41,7 @@ ${upperNameList}`)
 // It should look like this in your output:
 // [  ["Surname A", "SURNAME A"], ["Surname B", "SURNAME B"] ...other names ]
 // Output the result to the console.
+const namePairs=[]
+for(var i = 0; i<lastName.length; i++)  namePairs[i] = [lastName[i], upperNameList[i]];
 
-for(var i = 0; i<lastName.length; i++)  lastName[i] = [lastName[i], upperNameList[i]];
-
-
-console.log(lastName)
+console.log(namePairs)
